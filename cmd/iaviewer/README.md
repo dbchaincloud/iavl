@@ -9,8 +9,8 @@ Below is a brief introduction to the tool.
 Once this is merged into the offical repo, master, you should be able to do:
 
 ```shell
-go get github.com/tendermint/iavl
-cd ${GOPATH}/src/github.com/tendermint/iavl
+go get github.com/dbchaincloud/iavl
+cd ${GOPATH}/src/github.com/dbchaincloud/iavl
 make install
 ```
 

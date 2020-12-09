@@ -73,7 +73,7 @@ Special thanks to external contributors on this release: @ridenaio
 
 ### Bug Fixes
 
-- [import] [\#230](https://github.com/tendermint/iavl/pull/230) Set correct version when committing an empty import.
+- [import] [\#230](https://github.com/dbchaincloud/iavl/pull/230) Set correct version when committing an empty import.
 
 ## 0.13.2 (March 18, 2020)
 
@@ -85,11 +85,11 @@ Special thanks to external contributors on this release: @ridenaio
 
 ### Improvements
 
-- [dep] [\#220](https://github.com/tendermint/iavl/pull/220) Update tm-db to 0.5.0, which includes a new B-tree based MemDB used by IAVL for non-persisted versions.
+- [dep] [\#220](https://github.com/dbchaincloud/iavl/pull/220) Update tm-db to 0.5.0, which includes a new B-tree based MemDB used by IAVL for non-persisted versions.
 
 ### Bug Fixes
 
-- [nodedb] [\#219](https://github.com/tendermint/iavl/pull/219) Fix a concurrent database access issue when deleting orphans.
+- [nodedb] [\#219](https://github.com/dbchaincloud/iavl/pull/219) Fix a concurrent database access issue when deleting orphans.
 
 ## 0.13.0 (January 16, 2020)
 
@@ -98,20 +98,20 @@ Special thanks to external contributors on this release:
 
 ### BREAKING CHANGES
 
-- [pruning] [\#158](https://github.com/tendermint/iavl/pull/158) NodeDB constructor must provide `keepRecent` and `keepEvery` fields to define PruningStrategy. All Save functionality must specify whether they should flushToDisk as well using `flushToDisk` boolean argument. All Delete functionality must specify whether object should be deleted from memory only using the `memOnly` boolean argument.
-- [dep] [\#194](https://github.com/tendermint/iavl/pull/194) Update tm-db to 0.4.0 this includes interface breaking to return errors.
+- [pruning] [\#158](https://github.com/dbchaincloud/iavl/pull/158) NodeDB constructor must provide `keepRecent` and `keepEvery` fields to define PruningStrategy. All Save functionality must specify whether they should flushToDisk as well using `flushToDisk` boolean argument. All Delete functionality must specify whether object should be deleted from memory only using the `memOnly` boolean argument.
+- [dep] [\#194](https://github.com/dbchaincloud/iavl/pull/194) Update tm-db to 0.4.0 this includes interface breaking to return errors.
 
 ### IMPROVEMENTS
 
 ### Bug Fix
 
-- [orphans] [#177](https://github.com/tendermint/iavl/pull/177) Collect all orphans after remove (@rickyyangz)
+- [orphans] [#177](https://github.com/dbchaincloud/iavl/pull/177) Collect all orphans after remove (@rickyyangz)
 
 ## 0.12.4 (July 31, 2019)
 
 ### IMPROVEMENTS
 
-- [\#46](https://github.com/tendermint/iavl/issues/46) Removed all instances of cmn (tendermint/tendermint/libs/common)
+- [\#46](https://github.com/dbchaincloud/iavl/issues/46) Removed all instances of cmn (tendermint/tendermint/libs/common)
 
 ## 0.12.3 (July 12, 2019)
 
@@ -122,7 +122,7 @@ IMPROVEMENTS
 
 - Implement LazyLoadVersion (@alexanderbez)
   LazyLoadVersion attempts to lazy load only the specified target version
-  without loading previous roots/versions. - see [goDoc](https://godoc.org/github.com/tendermint/iavl#MutableTree.LazyLoadVersion)
+  without loading previous roots/versions. - see [goDoc](https://godoc.org/github.com/dbchaincloud/iavl#MutableTree.LazyLoadVersion)
 - Move to go.mod (@Liamsi)
 - `iaviewer` command to visualize IAVL database from leveldb (@ethanfrey)
 
@@ -161,9 +161,9 @@ IMPROVEMENTS
 
 - Database key format avoids use of fmt.Sprintf fmt.Sscanf leading to ~10% speedup in benchmark BenchmarkTreeLoadAndDelete ([#107], thanks to [@silasdavis])
 
-[#107]: https://github.com/tendermint/iavl/pull/107
+[#107]: https://github.com/dbchaincloud/iavl/pull/107
 [@silasdavis]: https://github.com/silasdavis
-[#96]: https://github.com/tendermint/iavl/pull/96
+[#96]: https://github.com/dbchaincloud/iavl/pull/96
 
 ## 0.10.0
 
@@ -174,8 +174,8 @@ BREAKING CHANGES
   - load read-only snapshots at previous versions on demand
   - load mutable trees at the most recently saved tree
 
-[1]: https://github.com/tendermint/iavl/blob/9e62436856efa94c1223043be36ebda01ae0b6fc/mutable_tree.go#L14-L21
-[2]: https://github.com/tendermint/iavl/blob/9e62436856efa94c1223043be36ebda01ae0b6fc/immutable_tree.go#L10-L17
+[1]: https://github.com/dbchaincloud/iavl/blob/9e62436856efa94c1223043be36ebda01ae0b6fc/mutable_tree.go#L14-L21
+[2]: https://github.com/dbchaincloud/iavl/blob/9e62436856efa94c1223043be36ebda01ae0b6fc/immutable_tree.go#L10-L17
 
 BUG FIXES
 

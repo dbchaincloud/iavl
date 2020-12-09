@@ -9,7 +9,7 @@
 //
 // Basic usage of MutableTree:
 //
-//  import "github.com/tendermint/iavl"
+//  import "github.com/dbchaincloud/iavl"
 //  import "github.com/tendermint/tm-db"
 //  ...
 //
